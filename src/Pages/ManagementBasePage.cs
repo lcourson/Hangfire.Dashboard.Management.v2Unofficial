@@ -233,7 +233,9 @@ namespace Hangfire.Dashboard.Management.v2.Pages
 								{
 									try
 									{
-										var jobId = client.Create(job, new EnqueuedState(jobMetadata.Queue));
+										var queueName = GetFormVariable($"{id}_queuename")??"default";
+										queueName = string.IsNullOrEmpty(queueName)? "default" : queueName;
+										var jobId = client.Create(job, new EnqueuedState(queueName));
 										jobLink = new UrlHelper(context).JobDetails(jobId);
 									}
 									catch (Exception e)

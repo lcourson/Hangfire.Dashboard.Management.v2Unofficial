@@ -148,13 +148,38 @@ WriteLiteral("\">Delayed</a></li>\r\n\t\t<li><a class=\"commands-type\" data-com
             
             #line default
             #line hidden
-WriteLiteral("\">Repeating</a></li>\r\n\t</ul>\r\n</div>\r\n<!-- Immediate Command -->\r\n<div class=\"com" +
-"mands-panel col-xs-12 Enqueue col-sm-9\">\r\n\t<button class=\"hdm-management-input-c" +
-"ommands btn btn-sm btn-success\" data-url=\"");
+WriteLiteral(@""">Repeating</a></li>
+	</ul>
+</div>
+<!-- Immediate Command -->
+<div class=""commands-options Enqueue col-xs-12 col-sm-6"">
+    <label class=""control-label"">Queue Name:</label>
+    <input type='text' class=""form-control hdm-execution-input"" placeholder=""QueueName"" id=""");
 
 
             
-            #line 44 "..\..\Pages\Partials\ButtonPartial.cshtml"
+            #line 45 "..\..\Pages\Partials\ButtonPartial.cshtml"
+                                                                                        Write($"{JobId}_queuename");
+
+            
+            #line default
+            #line hidden
+WriteLiteral("\" value=\"");
+
+
+            
+            #line 45 "..\..\Pages\Partials\ButtonPartial.cshtml"
+                                                                                                                       Write(Job.Queue);
+
+            
+            #line default
+            #line hidden
+WriteLiteral("\" />\r\n</div>\r\n\r\n<div class=\"commands-panel col-xs-12 Enqueue col-sm-3\">\r\n\t<button" +
+" class=\"hdm-management-input-commands btn btn-sm btn-success\" data-url=\"");
+
+
+            
+            #line 49 "..\..\Pages\Partials\ButtonPartial.cshtml"
                                                                            Write(Url.To(url));
 
             
@@ -164,7 +189,7 @@ WriteLiteral("\" data-loading-text=\"");
 
 
             
-            #line 44 "..\..\Pages\Partials\ButtonPartial.cshtml"
+            #line 49 "..\..\Pages\Partials\ButtonPartial.cshtml"
                                                                                                             Write(loadingText);
 
             
@@ -174,7 +199,7 @@ WriteLiteral("\" input-id=\"");
 
 
             
-            #line 44 "..\..\Pages\Partials\ButtonPartial.cshtml"
+            #line 49 "..\..\Pages\Partials\ButtonPartial.cshtml"
                                                                                                                                     Write(JobId);
 
             
@@ -191,7 +216,7 @@ WriteLiteral(@""" input-type=""Enqueue"">
 
 
             
-            #line 51 "..\..\Pages\Partials\ButtonPartial.cshtml"
+            #line 56 "..\..\Pages\Partials\ButtonPartial.cshtml"
                                                    Write($"{JobId}_datetimepicker");
 
             
@@ -201,7 +226,7 @@ WriteLiteral("\" data-td_options=\"");
 
 
             
-            #line 51 "..\..\Pages\Partials\ButtonPartial.cshtml"
+            #line 56 "..\..\Pages\Partials\ButtonPartial.cshtml"
                                                                                                  Write(JsonConvert.SerializeObject(JsonConvert.DeserializeObject(JobsHelper.ClientSideConfigurationOptions.DateTimeOpts.ScheduleButtonOptions), Formatting.None));
 
             
@@ -211,7 +236,7 @@ WriteLiteral("\">\r\n\t\t<input type=\'text\' class=\"form-control\" placeholder
 
 
             
-            #line 52 "..\..\Pages\Partials\ButtonPartial.cshtml"
+            #line 57 "..\..\Pages\Partials\ButtonPartial.cshtml"
                                                                      Write($"{JobId}_sys_datetime");
 
             
@@ -228,7 +253,7 @@ WriteLiteral(@""" />
 
 
             
-            #line 59 "..\..\Pages\Partials\ButtonPartial.cshtml"
+            #line 64 "..\..\Pages\Partials\ButtonPartial.cshtml"
                                                                                                      Write(JobId);
 
             
@@ -238,7 +263,7 @@ WriteLiteral("\" input-type=\"ScheduleDateTime\" data-url=\"");
 
 
             
-            #line 59 "..\..\Pages\Partials\ButtonPartial.cshtml"
+            #line 64 "..\..\Pages\Partials\ButtonPartial.cshtml"
                                                                                                                                                      Write(Url.To(url));
 
             
@@ -248,7 +273,7 @@ WriteLiteral("\" data-loading-text=\"");
 
 
             
-            #line 59 "..\..\Pages\Partials\ButtonPartial.cshtml"
+            #line 64 "..\..\Pages\Partials\ButtonPartial.cshtml"
                                                                                                                                                                                       Write(loadingText);
 
             
@@ -260,13 +285,14 @@ WriteLiteral(@""">
 	</button>
 </div>
 
+
 <!-- Schedule Timespan Command -->
 <div class=""commands-options ScheduleTimeSpan col-xs-12 col-sm-6 hide"">
 	<input type=""text"" class=""hdm-execution-input form-control time"" placeholder=""HH:mm:ss"" id=""");
 
 
             
-            #line 67 "..\..\Pages\Partials\ButtonPartial.cshtml"
+            #line 73 "..\..\Pages\Partials\ButtonPartial.cshtml"
                                                                                          Write($"{JobId}_sys_timespan");
 
             
@@ -279,7 +305,7 @@ WriteLiteral("\" data-inputmask=\"\'mask\' :\'99:99:99\'\">\r\n</div>\r\n<div cl
 
 
             
-            #line 71 "..\..\Pages\Partials\ButtonPartial.cshtml"
+            #line 77 "..\..\Pages\Partials\ButtonPartial.cshtml"
                                                                                                    Write(JobId);
 
             
@@ -289,7 +315,7 @@ WriteLiteral("\" input-type=\"ScheduleTimeSpan\" data-url=\"");
 
 
             
-            #line 71 "..\..\Pages\Partials\ButtonPartial.cshtml"
+            #line 77 "..\..\Pages\Partials\ButtonPartial.cshtml"
                                                                                                                                                    Write(Url.To(url));
 
             
@@ -299,7 +325,7 @@ WriteLiteral("\" data-loading-text=\"");
 
 
             
-            #line 71 "..\..\Pages\Partials\ButtonPartial.cshtml"
+            #line 77 "..\..\Pages\Partials\ButtonPartial.cshtml"
                                                                                                                                                                                     Write(loadingText);
 
             
@@ -317,7 +343,7 @@ WriteLiteral(@""">
 
 
             
-            #line 79 "..\..\Pages\Partials\ButtonPartial.cshtml"
+            #line 85 "..\..\Pages\Partials\ButtonPartial.cshtml"
  			foreach (var o in timeSpanItems)
 			{
 
@@ -328,7 +354,7 @@ WriteLiteral("\t\t\t\t<li>\r\n\t\t\t\t\t<a class=\"hdm-management-input-commands
 
 
             
-            #line 82 "..\..\Pages\Partials\ButtonPartial.cshtml"
+            #line 88 "..\..\Pages\Partials\ButtonPartial.cshtml"
                                                                Write(JobId);
 
             
@@ -338,7 +364,7 @@ WriteLiteral("\" input-type=\"ScheduleTimeSpan\" data-schedule=\"");
 
 
             
-            #line 82 "..\..\Pages\Partials\ButtonPartial.cshtml"
+            #line 88 "..\..\Pages\Partials\ButtonPartial.cshtml"
                                                                                                                     Write(o.Value);
 
             
@@ -348,7 +374,7 @@ WriteLiteral("\"\r\n\t\t\t\t\t   data-url=\"");
 
 
             
-            #line 83 "..\..\Pages\Partials\ButtonPartial.cshtml"
+            #line 89 "..\..\Pages\Partials\ButtonPartial.cshtml"
              Write(Url.To(url));
 
             
@@ -358,7 +384,7 @@ WriteLiteral("\" data-loading-text=\"");
 
 
             
-            #line 83 "..\..\Pages\Partials\ButtonPartial.cshtml"
+            #line 89 "..\..\Pages\Partials\ButtonPartial.cshtml"
                                               Write(loadingText);
 
             
@@ -368,7 +394,7 @@ WriteLiteral("\">");
 
 
             
-            #line 83 "..\..\Pages\Partials\ButtonPartial.cshtml"
+            #line 89 "..\..\Pages\Partials\ButtonPartial.cshtml"
                                                             Write(o.Key);
 
             
@@ -378,7 +404,7 @@ WriteLiteral("</a>\r\n\t\t\t\t</li>\r\n");
 
 
             
-            #line 85 "..\..\Pages\Partials\ButtonPartial.cshtml"
+            #line 91 "..\..\Pages\Partials\ButtonPartial.cshtml"
 			}
 
             
@@ -390,7 +416,7 @@ WriteLiteral("\t\t</ul>\r\n\t</div>\r\n</div>\r\n\r\n<!-- Cron Expression Comman
 
 
             
-            #line 92 "..\..\Pages\Partials\ButtonPartial.cshtml"
+            #line 98 "..\..\Pages\Partials\ButtonPartial.cshtml"
                                                                                      Write($"{JobId}_sys_cron");
 
             
@@ -400,7 +426,7 @@ WriteLiteral("\" placeholder=\"* 1 * * *\" value=\"\" />\r\n</div>\r\n");
 
 
             
-            #line 94 "..\..\Pages\Partials\ButtonPartial.cshtml"
+            #line 100 "..\..\Pages\Partials\ButtonPartial.cshtml"
  if (Job.AllowMultiple)
 {
 
@@ -412,7 +438,7 @@ WriteLiteral("\t<div class=\"commands-options CronExpression col-xs-12 col-sm-4 
 
 
             
-            #line 97 "..\..\Pages\Partials\ButtonPartial.cshtml"
+            #line 103 "..\..\Pages\Partials\ButtonPartial.cshtml"
                            Write($"{JobId}_Name");
 
             
@@ -423,7 +449,7 @@ WriteLiteral("\">\r\n\t\t\t<input type=\"text\" class=\"hdm-execution-input-name
 
 
             
-            #line 98 "..\..\Pages\Partials\ButtonPartial.cshtml"
+            #line 104 "..\..\Pages\Partials\ButtonPartial.cshtml"
                                                                                                     Write($"{JobId}_sys_name");
 
             
@@ -434,7 +460,7 @@ WriteLiteral("\" data-original-title=\"Give a unique name to your job\" spellche
 
 
             
-            #line 101 "..\..\Pages\Partials\ButtonPartial.cshtml"
+            #line 107 "..\..\Pages\Partials\ButtonPartial.cshtml"
 }
 
             
@@ -446,7 +472,7 @@ WriteLiteral("\r\n<div class=\"commands-panel CronExpression col-xs-12 col-sm-4 
 
 
             
-            #line 105 "..\..\Pages\Partials\ButtonPartial.cshtml"
+            #line 111 "..\..\Pages\Partials\ButtonPartial.cshtml"
                                                                                                       Write(JobId);
 
             
@@ -457,7 +483,7 @@ WriteLiteral("\" input-type=\"CronExpression\"\r\n\t\t\t\tdata-confirm=\"If this
 
 
             
-            #line 106 "..\..\Pages\Partials\ButtonPartial.cshtml"
+            #line 112 "..\..\Pages\Partials\ButtonPartial.cshtml"
                                                                                               Write(Url.To(url));
 
             
@@ -467,7 +493,7 @@ WriteLiteral("\" data-loading-text=\"");
 
 
             
-            #line 106 "..\..\Pages\Partials\ButtonPartial.cshtml"
+            #line 112 "..\..\Pages\Partials\ButtonPartial.cshtml"
                                                                                                                                Write(loadingText);
 
             
@@ -485,7 +511,7 @@ WriteLiteral(@""">
 
 
             
-            #line 114 "..\..\Pages\Partials\ButtonPartial.cshtml"
+            #line 120 "..\..\Pages\Partials\ButtonPartial.cshtml"
  			foreach (var o in cronItems)
 			{
 
@@ -496,7 +522,7 @@ WriteLiteral("\t\t\t\t<li>\r\n\t\t\t\t\t<a class=\"hdm-management-input-commands
 
 
             
-            #line 117 "..\..\Pages\Partials\ButtonPartial.cshtml"
+            #line 123 "..\..\Pages\Partials\ButtonPartial.cshtml"
                                                               Write(JobId);
 
             
@@ -506,7 +532,7 @@ WriteLiteral("\" input-type=\"CronExpression\" data-schedule=\"");
 
 
             
-            #line 117 "..\..\Pages\Partials\ButtonPartial.cshtml"
+            #line 123 "..\..\Pages\Partials\ButtonPartial.cshtml"
                                                                                                                  Write(o.Value);
 
             
@@ -517,7 +543,7 @@ WriteLiteral("\"\r\n\t\t\t\t\t\tdata-confirm=\"If this job already has a schedul
 
 
             
-            #line 118 "..\..\Pages\Partials\ButtonPartial.cshtml"
+            #line 124 "..\..\Pages\Partials\ButtonPartial.cshtml"
                                                                                                  Write(Url.To(url));
 
             
@@ -527,7 +553,7 @@ WriteLiteral("\" data-loading-text=\"");
 
 
             
-            #line 118 "..\..\Pages\Partials\ButtonPartial.cshtml"
+            #line 124 "..\..\Pages\Partials\ButtonPartial.cshtml"
                                                                                                                                   Write(loadingText);
 
             
@@ -537,7 +563,7 @@ WriteLiteral("\">\r\n\t\t\t\t\t\t");
 
 
             
-            #line 119 "..\..\Pages\Partials\ButtonPartial.cshtml"
+            #line 125 "..\..\Pages\Partials\ButtonPartial.cshtml"
  Write(o.Key);
 
             
@@ -547,7 +573,7 @@ WriteLiteral(": <span>(");
 
 
             
-            #line 119 "..\..\Pages\Partials\ButtonPartial.cshtml"
+            #line 125 "..\..\Pages\Partials\ButtonPartial.cshtml"
                 Write(o.Value);
 
             
@@ -557,7 +583,7 @@ WriteLiteral(")</span>\r\n\t\t\t\t\t</a>\r\n\t\t\t\t</li>\r\n");
 
 
             
-            #line 122 "..\..\Pages\Partials\ButtonPartial.cshtml"
+            #line 128 "..\..\Pages\Partials\ButtonPartial.cshtml"
 			}
 
             

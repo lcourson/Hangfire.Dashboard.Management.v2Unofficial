@@ -157,7 +157,9 @@
 
 
 						if (send.type === 'Enqueue') {
-							// Nothing extra to read here
+							let queueNameInput =  $(".commands-options.Enqueue .hdm-execution-input[id^='" + id + "']", container)
+							let val = queueNameInput.val();
+							send[queueNameInput.prop('id')] = val;
 						}
 						else if (send.type === 'ScheduleDateTime') {
 							let sdtTd = $(".commands-options.ScheduleDateTime .hdm-execution-input[id^='" + id + "']", container)
