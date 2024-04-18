@@ -40,7 +40,12 @@
 	</ul>
 </div>
 <!-- Immediate Command -->
-<div class="commands-panel col-xs-12 Enqueue col-sm-9">
+<div class="commands-options Enqueue col-xs-12 col-sm-6">
+    <label class="control-label">Queue Name:</label>
+    <input type='text' class="form-control hdm-execution-input" placeholder="QueueName" id="@($"{JobId}_queuename")" value="@Job.Queue" />
+</div>
+
+<div class="commands-panel col-xs-12 Enqueue col-sm-3">
 	<button class="hdm-management-input-commands btn btn-sm btn-success" data-url="@Url.To(url)" data-loading-text="@loadingText" input-id="@JobId" input-type="Enqueue">
 		<span class="glyphicon glyphicon-play-circle"></span>
 		Queue Execution
